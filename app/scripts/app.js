@@ -7,10 +7,10 @@
             });
         
         $stateProvider
-            .state('landing', {
+            .state('rooms', {
                 url: '/',
-                controller: 'LandingCtrl as landing',
-                templateUrl: '/templates/landing.html'
+                controller: 'RoomCtrl as rooms',
+                templateUrl: '/templates/rooms.html'
             });
     }
     angular
