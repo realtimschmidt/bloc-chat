@@ -1,0 +1,40 @@
+*, *::before, *::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: "Fjord One"; serif;
+    background-color: #F1FFFA; 
+}
+
+.hero-content {
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 14rem;
+    height: 100%;
+    background-color: #93B7BE 
+}
+
+.hero-content .hero-title {
+    color: #785964;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.room-title {
+    color: #454545;
+    margin: 0.5rem 1rem;
+}
+
+/* Medium and small screens (640px) */
+@media (min-width: 640px) {
+    html { font-size: 120%; }
+    .hero-content { width: 16rem; }
+}
