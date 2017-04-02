@@ -20,12 +20,25 @@ body {
     top: 0;
     width: 14rem;
     height: 100%;
-    background-color: #93B7BE 
+    background-color: #93B7BE; 
 }
 
 .hero-content .hero-title {
     color: #785964;
     margin: 2rem 1rem 1rem 1rem;
+}
+
+.new-room {
+    position: relative;
+    left: 1rem;
+    width: 8rem;
+    padding: 0.15rem;
+    background-color: #F1FFFA;
+}
+
+h4 {
+    color: #785964;
+    margin: 0.5rem;
 }
 
 .room-title {
@@ -36,5 +49,12 @@ body {
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 120%; }
-    .hero-content { width: 16rem; }
+    .hero-content { width: 18rem; }
+    .new-room { 
+        position: absolute;
+        left: 10rem; 
+        top: 1.75rem; 
+        width: 6.5rem; 
+    }
+    .room-title { font-size: 140% }
 }
