@@ -7,10 +7,6 @@
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalCtrl as modal'
             });
-            
-            modalInstance.result.then(function(newRoom) {
-                Room.add(newRoom)
-            });
         };
     }
     

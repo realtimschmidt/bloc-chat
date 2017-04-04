@@ -47,7 +47,7 @@ h4 {
 }
 
 .modal-btn {
-    margin: 1rem 1rem 2rem 12rem;
+    margin: 1rem 1rem 2rem 10.5rem;
 }
 
 /* Medium and small screens (640px) */
@@ -61,4 +61,7 @@ h4 {
         width: 6.5rem; 
     }
     .room-title { font-size: 140% }
+    .modal-btn {
+    margin: 1rem 1rem 2rem 12rem;
+    }
 }

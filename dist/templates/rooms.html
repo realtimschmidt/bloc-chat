@@ -3,10 +3,7 @@
     <button class="new-room" ng-click="rooms.openModal()">
         <h4 class="room-btn">New Room</h4>
     </button>
-    <!--<div class="room-title">Room 1</div>
-    <div class="room-title">Room 2</div>
-    <div class="room-title">Room 3</div>-->
-    <div class="room-title" ng-repeat="room in rooms.rooms">
-        {{ room }}
+    <div class="room-title" ng-repeat="room in rooms.rooms track by $index">
+        {{ room.name }}
     </div>
 </section>
