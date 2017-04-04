@@ -1,0 +1,9 @@
+<section class="hero-content">
+    <h1 class="hero-title">Bloc Chat</h1>
+    <button class="new-room" ng-click="rooms.openModal()">
+        <h4 class="room-btn">New Room</h4>
+    </button>
+    <div class="room-title" ng-repeat="room in rooms.rooms track by $index">
+        {{ room.name }}
+    </div>
+</section>
