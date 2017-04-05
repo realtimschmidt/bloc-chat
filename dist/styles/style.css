@@ -50,6 +50,15 @@ h4 {
     margin: 1rem 1rem 2rem 10.5rem;
 }
 
+.messages {
+    position: absolute;
+    left: 14rem;
+}
+
+.messages-room-name {
+    padding: 1rem 3rem;
+}
+
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 120%; }
@@ -64,4 +73,6 @@ h4 {
     .modal-btn {
     margin: 1rem 1rem 2rem 12rem;
     }
+    .messages { left: 18rem; }
+
 }
