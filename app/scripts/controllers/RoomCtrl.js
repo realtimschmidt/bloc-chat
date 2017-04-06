@@ -7,7 +7,7 @@
         this.openModal = function () {
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal'
+                controller: 'RoomModalCtrl as modal'
             });
         };
         
@@ -15,6 +15,7 @@
             this.messagesTitle = "Something to get room ID";
             this.messages = "Something to get messages";
         }
+        
     }
     
     angular

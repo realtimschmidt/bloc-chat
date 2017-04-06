@@ -1,5 +1,5 @@
 (function() {
-    function ModalCtrl(Room, $scope, $uibModalInstance) {
+    function RoomModalCtrl(Room, $scope, $uibModalInstance) {
         
         this.create = function () {
             Room.add($scope.roomName);
@@ -15,5 +15,5 @@
     
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$scope','$uibModalInstance', ModalCtrl]);
+        .controller('RoomModalCtrl', ['Room', '$scope','$uibModalInstance', RoomModalCtrl]);
 })();
