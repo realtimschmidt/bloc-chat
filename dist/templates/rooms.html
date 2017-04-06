@@ -4,12 +4,12 @@
         <h4 class="room-btn">New Room</h4>
     </button>
     <div class="room-title" ng-repeat="room in rooms.rooms track by $index">
-        <div ng-click="rooms.selectRoom()">{{ room.name }}</div>
+        <div ng-click="rooms.selectRoom(room)">{{ room.name }}</div>
     </div>
 </section>
 
 <section class="messages-room-title">
-    <h2 class="messages-room-name">{{ rooms.messagesTitle }}</h2>
+    <h2 class="messages-room-name">{{ rooms.currentRoom.name }}</h2>
 </section>
 
 <section class="messages-content">
