@@ -1,7 +1,8 @@
 (function() {
     function RoomCtrl(Room, $uibModal) {
         this.rooms = Room.all;
-        this.messagesTitle = 'Selected Room Title Goes Here';
+        this.messagesTitle = 'Default Room Title';
+        this.messages = 'Default Messages';
         
         this.openModal = function () {
             var modalInstance = $uibModal.open({
@@ -10,13 +11,11 @@
             });
         };
         
-        //this.selectRoom = function(room) {
-            //this.messagesTitle = room;
-        //}
-
+        this.selectRoom = function() {
+            this.messagesTitle = "Something to get room ID";
+            this.messages = "Something to get messages";
+        }
     }
-    
-
     
     angular
         .module('blocChat')

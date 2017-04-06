@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: "Fjord One"; serif;
-    background-color: #F1FFFA; 
+    background-color: #FFFFFF; 
 }
 
 .hero-content {
@@ -50,12 +50,24 @@ h4 {
     margin: 1rem 1rem 2rem 10.5rem;
 }
 
-.messages {
+.messages-room-title {
     position: absolute;
+    background-color: #F1FFFA;
     left: 14rem;
+    width: 100%;
 }
 
 .messages-room-name {
+    padding: 1rem 3rem;
+}
+
+.messages-content {
+    position: absolute;
+    left: 14rem;
+    top: 6rem;
+}
+
+.messages {
     padding: 1rem 3rem;
 }
 
@@ -73,6 +85,6 @@ h4 {
     .modal-btn {
     margin: 1rem 1rem 2rem 12rem;
     }
-    .messages { left: 18rem; }
-
+    .messages-room-title { left: 18rem; }
+    .messages-content { left: 18rem; }
 }
