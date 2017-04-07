@@ -71,6 +71,12 @@ h4 {
     padding: 1rem 3rem;
 }
 
+.username {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem; 
+}
+
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 120%; }

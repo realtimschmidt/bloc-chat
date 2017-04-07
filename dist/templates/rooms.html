@@ -6,6 +6,7 @@
     <div class="room-title" ng-repeat="room in rooms.rooms track by $index">
         <div ng-click="rooms.selectRoom(room)">{{ room.name }}</div>
     </div>
+    <div class="username">user: {{ user.name }}</div>
 </section>
 
 <section class="messages-room-title">

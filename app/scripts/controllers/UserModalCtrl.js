@@ -1,16 +1,14 @@
 (function() {
-    function UserModalCtrl(Room, $scope, $uibModalInstance) {
+    function UserModalCtrl(Room, $cookies, $uibModalInstance) {
         
-        /*this.create = function () {
-            Room.add($scope.roomName);
+        this.createUsername = function(name) {
+            $cookies.put('blocChatCurrentUser', name);
             $uibModalInstance.close();
-        };*/
-        
-
+        }
     }
     
     
     angular
         .module('blocChat')
-        .controller('UserModalCtrl', ['Room', '$scope','$uibModalInstance', UserModalCtrl]);
+        .controller('UserModalCtrl', ['Room', '$cookies','$uibModalInstance', UserModalCtrl]);
 })();

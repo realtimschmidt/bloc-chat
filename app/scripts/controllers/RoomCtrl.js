@@ -1,6 +1,5 @@
 (function() {
     function RoomCtrl(Message, Room, $uibModal) {
-    //function RoomCtrl(Room, $uibModal) {
         this.rooms = Room.all;
         this.messages = 'Default Messages';
         this.currentRoom = null;
@@ -24,5 +23,4 @@
     angular
         .module('blocChat')
         .controller('RoomCtrl', ['Message', 'Room', '$uibModal', RoomCtrl]);
-        //.controller('RoomCtrl', ['Room', '$uibModal', RoomCtrl]);
 })();
