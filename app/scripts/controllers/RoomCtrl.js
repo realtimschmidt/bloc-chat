@@ -1,8 +1,12 @@
 (function() {
-    function RoomCtrl(Message, Room, $uibModal) {
+    function RoomCtrl(Message, Room, $uibModal, $cookies) {
         this.rooms = Room.all;
         this.messages = 'Default Messages';
         this.currentRoom = null; //find a way to get first room [0] as default room
+        this.currentUser = $cookies.get('blocChatCurrentUser');
+        console.log(">>>>>>");
+        console.log(this.currentUser);
+        console.log("<<<<<<");
         
         this.openModal = function () {
             var modalInstance = $uibModal.open({
@@ -20,5 +24,5 @@
     
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Message', 'Room', '$uibModal', RoomCtrl]);
+        .controller('RoomCtrl', ['Message', 'Room', '$uibModal', '$cookies', RoomCtrl]);
 })();
