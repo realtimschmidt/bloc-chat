@@ -4,7 +4,7 @@
         this.createUsername = function() {
             $cookies.put('blocChatCurrentUser', this.name);
             $uibModalInstance.close();
-            console.log(this.name);
+
         }
     }
     
