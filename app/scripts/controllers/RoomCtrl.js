@@ -2,9 +2,7 @@
     function RoomCtrl(Message, Room, $uibModal) {
         this.rooms = Room.all;
         this.messages = 'Default Messages';
-        this.currentRoom = null;
-
-        
+        this.currentRoom = null; //find a way to get first room [0] as default room
         
         this.openModal = function () {
             var modalInstance = $uibModal.open({

@@ -1,9 +1,10 @@
 (function() {
     function UserModalCtrl(Room, $cookies, $uibModalInstance) {
         
-        this.createUsername = function(name) {
+        this.createUsername = function() {
             $cookies.put('blocChatCurrentUser', name);
             $uibModalInstance.close();
+            console.log(this.name);
         }
     }
     

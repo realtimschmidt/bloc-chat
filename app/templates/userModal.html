@@ -1,4 +1,4 @@
-<div class="room-title">Set a Username: <input type="text" ng-model="user.name" required/></div>
+<div class="room-title">Set a Username: <input type="text" ng-model="user.name" /></div>
 <div>
-    <button class="modal-btn" ng-click="user.createUsername()">Create Username</button>
+    <button class="user-modal-btn" ng-disabled="!user.name" ng-click="user.createUsername()">Create Username</button>
 </div>
