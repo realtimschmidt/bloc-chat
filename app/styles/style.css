@@ -81,6 +81,30 @@ h4 {
     left: 1rem; 
 }
 
+.send-messages {
+    position: fixed;
+    bottom: 0;
+    left: 14rem;
+    width: 100%;
+    height: 6rem;
+    background-color: #EFEFEF
+}
+
+.new-message-text {
+    margin: 1rem;
+}
+
+.new-message-input {
+    width: 50%;
+    height: auto;
+}
+
+.send-btn {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 120%; }
@@ -97,4 +121,5 @@ h4 {
     }
     .messages-room-title { left: 18rem; }
     .messages-content { left: 18rem; }
+    .send-messages { left: 18rem; }
 }

@@ -18,6 +18,10 @@
             this.messages = Message.getByRoomId(room.$id);
         }
         
+        this.something = function(somthing) {
+            this.something = Message.send(something);
+        }
+        
     }
     
     angular
