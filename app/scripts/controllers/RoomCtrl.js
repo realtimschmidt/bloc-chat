@@ -1,10 +1,10 @@
 (function() {
-    function RoomCtrl(Message, Room, $uibModal, $cookies) {
+    function RoomCtrl(Message, Room, $uibModal, $cookies, $scope) {
         this.rooms = Room.all;
-        this.messages = 'Default Messages';
-        this.currentRoom = null; //find a way to get first room [0] as default room
+        this.messages = 'Placeholder Messages';
+        this.currentRoom = 'Placeholder Room'; //find a way to get first room [0] as default room
         this.currentUser = $cookies.get('blocChatCurrentUser');
-        console.log(this.currentUser);
+        
         
         this.openModal = function () {
             var modalInstance = $uibModal.open({
@@ -16,15 +16,24 @@
         this.selectRoom = function(room) {
             this.currentRoom = room;
             this.messages = Message.getByRoomId(room.$id);
+            console.log(this.messages);
         }
         
-        this.something = function(somthing) {
-            this.something = Message.send(something);
+        this.send = function(messageContent) {
+            var newMessage = {
+                roomId: this.currentRoom.$id,
+                username: this.currentUser,
+                sentAt: Date.now(),
+                content: messageContent
+            };
+            Message.send(newMessage);
         }
-        
+        $scope.clearfunction = function(event){
+            event.messageContent = null;
+        }
     }
     
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['Message', 'Room', '$uibModal', '$cookies', RoomCtrl]);
+        .controller('RoomCtrl', ['Message', 'Room', '$uibModal', '$cookies', '$scope', RoomCtrl]);
 })();

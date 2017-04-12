@@ -1,9 +1,8 @@
 <section class="new-messages-background">
     <div class="new-messages-holder">
-        <input type="text" class="new-message-input">
-        
+        <input type="text" class="new-message-input" ng-model="messageContent">
     </div>
-    <button class="send-btn">Send</button>
+    <button class="send-btn" ng-click="rooms.send(messageContent); clearfunction(this)">Send</button>
 </section>
 
 <section class="hero-content">
@@ -22,6 +21,12 @@
 </section>
 
 <section class="messages-content">
-    <div class="messages">{{ rooms.messages }}</div>
+    <div class="message-holder">
+    <!--<div ng-repeat="message in rooms.messages">-->
+        <p class="message-username">Username {{ message.username }}</p>
+        <p class="time-stamp">5:45pm {{ message.sentAt }}</p>
+        <p class="messages">Message content {{ message.content }}</p>
+    <!--</div>-->
+    </div>
 </section>
 

@@ -11,6 +11,7 @@
             send: function(newMessage) {//object with multiple properties
                 //send method logic
                 //takes a message object as an argument and submits it to your Firebase server
+                messages.$add(newMessage);
             }
         };
     }
