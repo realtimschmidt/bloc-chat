@@ -6,7 +6,8 @@
         return {
             getByRoomId: function (roomId) {
                 // Filter the messages by their room ID.
-                ref.orderByChild('roomId').equalTo(roomId);
+                var set = ref.orderByChild('roomId').equalTo(roomId);
+                return $firebaseArray(set);
             },
             send: function(newMessage) {//object with multiple properties
                 //send method logic

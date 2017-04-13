@@ -22,11 +22,11 @@
 
 <section class="messages-content">
     <div class="message-holder">
-    <!--<div ng-repeat="message in rooms.messages">-->
-        <p class="message-username">Username {{ message.username }}</p>
-        <p class="time-stamp">5:45pm {{ message.sentAt }}</p>
-        <p class="messages">Message content {{ message.content }}</p>
-    <!--</div>-->
+    <div ng-repeat="message in rooms.messages">
+        <p class="message-username">{{ message.username }}</p>
+        <p class="time-stamp">{{ message.sentAt }}</p>
+        <p class="messages">{{ message.content }}</p>
+    </div>
     </div>
 </section>
 
