@@ -18,11 +18,44 @@
             this.messages = Message.getByRoomId(room.$id);
         }
         
+        function timeStamp() {
+            var now = new Date();
+            var zone = now.getTimezoneOffset()/60;
+            var seconds = Math.floor((now / 1000) % 60);
+            var minutes = Math.floor((now / 60000) % 60);
+            var hour = (Math.floor((now / 3600000) % 24)) - zone;
+            
+            var output = '';
+            if (hour < 0) {
+                output += 24 + hour + ':';
+            } else if (hour < 10) {
+                output += '0' + hour + ':';
+            } else if (hour > 23) {
+                output += '0' + (hour - 24) + ':';
+            } else {
+                output += hour + ':';
+            }
+            
+            if (minutes < 10) {
+                output += '0'
+            }
+            
+            output += minutes + ':';
+            if (seconds < 10) {
+                output += '0'
+            }
+            
+            output += seconds;
+ 
+            return output;
+        }
+
+
         this.send = function(messageContent) {
             var newMessage = {
                 roomId: this.currentRoom.$id,
                 username: this.currentUser,
-                sentAt: Date.now(),
+                sentAt: timeStamp(),
                 content: messageContent
             };
             Message.send(newMessage);
