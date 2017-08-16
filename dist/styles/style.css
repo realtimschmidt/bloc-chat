@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: "Fjord One"; serif;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
 }
 
 .hero-content {
@@ -20,7 +20,7 @@ body {
     top: 0;
     width: 14rem;
     height: 100%;
-    background-color: #93B7BE; 
+    background-color: #93B7BE;
 }
 
 .hero-content .hero-title {
@@ -34,6 +34,23 @@ body {
     width: 7rem;
     padding: 0.1rem;
     margin: 0 0 1rem 0;
+    background-color: #F1FFFA;
+    border-style: solid;
+    border-color: #F1FFFA;
+    border-width: 3px;
+    border-radius: 3px;
+}
+
+.new-room:hover {
+  background-color: #e4f3f0;
+  border-width: 3px;
+  border-color: #F1FFFA;
+}
+
+.new-room:active {
+  background-color: #F1FFFA;
+  border-width: 3px;
+  border-color: #F1FFFA;
 }
 
 .room-title {
@@ -84,7 +101,7 @@ body {
 .username {
     position: fixed;
     bottom: 1rem;
-    left: 1rem; 
+    left: 1rem;
 }
 
 .new-messages-background {
@@ -110,17 +127,34 @@ body {
     right: 0;
     top: 0;
     margin: 2rem;
+    background-color: #F1FFFA;
+    border-style: solid;
+    border-color: #F1FFFA;
+    border-width: 3px;
+    border-radius: 3px;
+}
+
+.send-btn:hover {
+  background-color: #e4f3f0;
+  border-width: 3px;
+  border-color: #F1FFFA;
+}
+
+.send-btn:active {
+  background-color: #F1FFFA;
+  border-width: 3px;
+  border-color: #F1FFFA;
 }
 
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
     html { font-size: 120%; }
     .hero-content { width: 18rem; }
-    .new-room { 
+    .new-room {
         position: absolute;
-        left: 10rem; 
-        top: 1.75rem; 
-        width: 6.5rem; 
+        left: 10rem;
+        top: 1.75rem;
+        width: 6.5rem;
     }
     .room-title { font-size: 140% }
     .modal-btn {
