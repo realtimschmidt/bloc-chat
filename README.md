@@ -12,4 +12,4 @@ Firebase
 
 ## Try It
 
-<a href="http://bloc-chat-realtimschmidt.netlify.com/" target="_blank">Bloc Chat on Netlify</a>
+<a href="http://bloc-chat-realtimschmidt.netlify.com/">Bloc Chat on Netlify</a>
